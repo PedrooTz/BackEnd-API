@@ -195,7 +195,7 @@ var clientes = {
                 descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                 preco: '23,59',
                 img: 'img/',
-                avaliacao: '⭐⭐⭐'
+                avaliacao: '3'
             },
             {
                 id: 2,
@@ -203,15 +203,15 @@ var clientes = {
                 descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                 preco: '24.00',
                 img: 'img/',
-                avaliacao: '⭐⭐⭐⭐'
+                avaliacao: '4'
             },
-            {
+            {   
                 id: 3,
                 nome: 'Pizza de Peperoni com queijo e tomate', 
                 descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                 preco: '24.00',
                 img: 'img/',
-                avaliacao: '⭐⭐'
+                avaliacao: '2'
             },
             {
                 id: 4,
@@ -219,7 +219,7 @@ var clientes = {
                 descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                 preco: '24.00',
                 img: 'img/',
-                avaliacao: '⭐⭐⭐⭐'
+                avaliacao: '4'
             },
             {
                 id: 3,
@@ -227,7 +227,7 @@ var clientes = {
                 descricao: 'Refrigerante Garrafa 3l, embalagem ecônomica.',
                 preco: '14.99',
                 img: 'img/',
-                avaliacao: '⭐⭐⭐⭐⭐'
+                avaliacao: '5'
             },
             {
                 id: 4,
@@ -235,7 +235,7 @@ var clientes = {
                 descricao: 'Refrigerante Garrafa 3l, embalagem ecônomica..',
                 preco: '17.99',
                 img: 'img/',
-                avaliacao: '⭐'
+                avaliacao: '1'
             },
             
 
@@ -243,4 +243,4 @@ var clientes = {
 
     }
 
-module.exports={clientes, categorias, produtos}
+module.exports={clientes, categorias, produtos }
