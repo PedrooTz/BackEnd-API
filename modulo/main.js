@@ -18,14 +18,16 @@ return JsonSigla
 
 };
 
+// ********************************************************************************************************
+
 const getClientesPizzaria = function() {
 
-    
+   
     let pizarriaARRAY=[]
     let filtrarNome = 'Fulano da Silva'
     let cont = 0
     while(cont < 8){
-        
+       
         if(filtrarNome.toUpperCase()==pizzariaApi.clientes.usuarios[cont].nome.toUpperCase()){
         pizarriaJSON={}
         pizarriaJSON.id =pizzariaApi.clientes.usuarios[cont].id
@@ -44,29 +46,79 @@ const getClientesPizzaria = function() {
     return pizarriaARRAY;
 };
 
-    const getProdutosPizzaria = function(){
+// ********************************************************************************************************
 
-            let JsonDados = {}
-            let produtos = pizzariaApi.produtos.dados;
-    
-            produtos.forEach(function (dados) {
-    
-                if(produtos = '1'){
-                    JsonDados.id = dados.id
-                    JsonDados.nome = dados.nome
-                    JsonDados.descricao = dados.descricao
-        
+    const getProdutosPizzaria = (id = "1") => {
+
+
+       
+            let produtos = pizzariaApi.produtos
+            let ArrayDados = []
+            let produtoId = id
+            let status = false
+           
+            produtos.dados.forEach((dados) => {
+               
+                if(dados.id == produtoId){
+       
+                    let JsonDados = {
+                        id: dados.id,
+                        nome: dados.nome,
+                        descricao: dados.descricao,
+                        preco: dados.preco,
+                        avaliacao: dados.avaliacao,
+                        img: dados.img
+
+                    }
+                   
+                    status = true
+                    ArrayDados.push(JsonDados)
+       
                 }
-                
-            });
+       
+            })
+            let JsonProdutos = { ArrayDados }
+
+            if(status){
+                return JsonProdutos
+            } else {
+                return false
+            }
+        };
+
+// ********************************************************************************************************
+
+     const getListaClientesPizzaria = function (){
+
+
+        let ArraySigla = []
+        let JsonSigla = {}
+        let cont = 0;
+        while  (cont < 8 ){
+           
+        ArraySigla.push(pizzariaApi.clientes.usuarios[cont])
+        cont++
+        }
+        JsonSigla.pizzaria = ArraySigla.length
+        JsonSigla.classe = ArraySigla
+        return JsonSigla
+           
+           
+        };
+
+// ********************************************************************************************************
 
 
 
-    }
+// console.log(getListaClientesPizzaria());
 
-    console.log(getProdutosPizzaria(1));
+// console.log(getProdutosPizzaria());
 
 // console.log(getClientesPizzaria());
 
-
 // console.log(getDadosPizzaria());
+
+module.exports = {
+    getDadosPizzaria,
+    getListaClientesPizzaria,
+}
